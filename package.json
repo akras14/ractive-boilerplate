@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "watchify scripts/index.js -o build/bundle.js -v"
+    "start": "watchify -t [ stringify --extensions [.html] ] scripts/index.js -o build/bundle.js -v"
   },
   "author": "Alex Kras",
   "license": "ISC",
   "dependencies": {
+    "page": "^1.6.4",
     "ractive": "^0.7.3",
+    "stringify": "^4.0.1",
     "watchify": "^3.7.0"
   }
 }
